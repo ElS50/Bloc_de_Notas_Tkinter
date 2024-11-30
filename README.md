@@ -8,19 +8,18 @@
 #### Persistencia de datos con SQLite.
 
 ## Requisitos
-### El alumno necesita:
-#### Entender conceptos básicos de bases de datos.
+#### El alumno necesita entender conceptos básicos de bases de datos.
 #### Tener instalada la biblioteca sqlite3 (incluida en Python).
 
 ## Estructura del Registro de Usuario
 ### Ventana de inicio:
-#### Dos botones: Iniciar Sesión y Registrarse.
+Dos botones: Iniciar Sesión y Registrarse.
 #### Ventana de registro:
-#### Permite al usuario ingresar nombre, correo electrónico y contraseña.
+Permite al usuario ingresar nombre, correo electrónico y contraseña.
 #### Ventana de inicio de sesión:
-#### Verifica las credenciales y da acceso al Bloc de Notas.
+Verifica las credenciales y da acceso al Bloc de Notas.
 ### Bloc de Notas:
-#### Solo accesible después de iniciar sesión.
+Solo accesible después de iniciar sesión.
 
 ## Guía Paso a Paso
 ### a) Configuración de la base de datos
