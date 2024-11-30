@@ -19,7 +19,7 @@
 #### Permite al usuario ingresar nombre, correo electrónico y contraseña.
 #### Ventana de inicio de sesión:
 #### Verifica las credenciales y da acceso al Bloc de Notas.
-###Bloc de Notas:
+### Bloc de Notas:
 #### Solo accesible después de iniciar sesión.
 
 ## Guía Paso a Paso
