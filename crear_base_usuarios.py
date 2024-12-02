@@ -1,18 +1,19 @@
 import sqlite3
 
+# Conectar a la base de datos (esto crea el archivo si no existe)
 conexion = sqlite3.connect('usuarios.db')
-
 cursor = conexion.cursor()
 
+# Crear la tabla de usuarios (id, nombre_usuario, contrasena)
 cursor.execute('''
     CREATE TABLE IF NOT EXISTS usuarios(
         id_usuario INTEGER PRIMARY KEY AUTOINCREMENT,
-        nombre TEXT NOT NULL,
-        correo TEXT NOT NULL,
-        contrasena TEXT NOT NULL         
-    )
+        nombre TEXT UNIQUE,
+        correo TEXT UNIQUE,
+        contrasena TEXT)
 ''')
 
 conexion.commit()
+conexion.close()
 
-print("Base de datos creada y tabla 'usuarios' configurada.")
+#print("Base de datos creada y tabla 'usuarios' configurada.") Se descomenta solo si hay un error en la base
