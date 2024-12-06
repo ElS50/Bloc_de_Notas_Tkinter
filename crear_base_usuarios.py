@@ -16,4 +16,6 @@ def iniciar_bd():
     conexion.commit()
     conexion.close()
 
+    
+
 #print("Base de datos creada y tabla 'usuarios' configurada.") Se descomenta solo si hay un error en la base
