@@ -21,18 +21,6 @@ Verifica las credenciales y da acceso al Bloc de Notas.
 ### Bloc de Notas:
 Solo accesible después de iniciar sesión.
 
-## Guía Paso a Paso
-### a) Configuración de la base de datos
-Crear una base de datos SQLite para almacenar usuarios.
-### b) Ventana de inicio
-Una ventana principal con dos opciones: Iniciar Sesión y Registrarse.
-### c) Registro de usuarios
-Una ventana para que el usuario cree una cuenta.
-### d) Inicio de sesión
-Una ventana que verifica las credenciales del usuario.
-### e) Integrar el Bloc de Notas
-Conecta el Bloc de Notas como ventana principal tras iniciar sesión.
-
 ## Extensiones del Proyecto
 #### Olvidé mi contraseña: Implementa una funcionalidad para recuperar o restablecer contraseñas.
 #### Sesión persistente: Guarda la información del usuario logueado usando cookies o archivos locales.
@@ -43,8 +31,6 @@ Conecta el Bloc de Notas como ventana principal tras iniciar sesión.
 #### Refuerza conceptos de bases de datos y manejo de errores.
 #### Aprende a conectar la interfaz gráfica con la lógica del backend.
 #### Gana experiencia creando aplicaciones completas y funcionales.
-
-### Con esta guía, el alumno tendrá un desafío interesante y aprenderá habilidades esenciales para el desarrollo de software.
 
 ## Objetivo del Proyecto
 ### Crear una aplicación GUI que permita al usuario:
