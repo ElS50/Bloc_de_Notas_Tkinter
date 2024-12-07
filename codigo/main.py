@@ -3,6 +3,8 @@ import hashlib
 import tkinter as tk
 from tkinter import messagebox
 from app_principal import abrir_ventana_principal  # Importar la ventana principal
+from recuperar import ventana_recuperacion
+from registro import ventana_registro
 
 # Crear la base de datos y tabla si no existen
 def crear_base_datos():
@@ -82,31 +84,47 @@ root.geometry("400x300")  # Tamaño de la ventana (ancho x alto)
 root.configure(bg="black")
 
 # Etiqueta de bienvenida
-tk.Label(root, text="Inicio de Sesion", font=("Arial", 14), fg="white", bg="black").pack(pady=10)
+tk.Label(root, text="INICIO DE SESION", font=("Arial", 14), fg="white", bg="black").pack(pady=10)
 
 # Etiquetas y campos de entrada para el usuario
-tk.Label(root, text="Nombre de usuario:", bg="black", fg="white").pack(pady=5)
+tk.Label(root, text="NOMBRE DE USUARIO:", bg="black", fg="white").pack(pady=5)
 entry_username = tk.Entry(root)
 entry_username.pack(pady=5)
 
-tk.Label(root, text="Contraseña:", bg="black", fg="white").pack(pady=5)
+tk.Label(root, text="CONTRASEÑA:", bg="black", fg="white").pack(pady=5)
 entry_password = tk.Entry(root, show="*")
 entry_password.pack(pady=5)
 
-btn_validate = tk.Button(root, text="Iniciar Sesión", bg="red", fg="white", command=validar_desde_formulario)
+btn_validate = tk.Button(root, text="INICIO DE SECION", bg="red", fg="white", command=validar_desde_formulario)
 btn_validate.pack(pady=5)
 
 # Crear un marco rojo con fondo negro y bordes
 marco = tk.Frame(root, bg="black", bd=2, relief="solid", highlightbackground="red", highlightcolor="red", highlightthickness=2)
 marco.pack(pady=10, padx=20)  # Espaciado alrededor del marco
 
-# Botones para registrar y validar con fondo rojo y texto blanco
-btn_register = tk.Button(marco, text="Registrar", bg="red", fg="white", command=registrar_desde_formulario)
-btn_register.pack(side="left", padx=10, pady=10)  # Alinear a la izquierda, con margen horizontal y vertical
+##########################################################################################################################s
 
-btn3 = tk.Button(marco, text="Recuperar Contraseña", bg="red", fg="white")
-btn3.pack(side="left", padx=10, pady=10)
+# Función para abrir la ventana de recuperación
+def abrir_ventana_registro():
+    ventana_registro()
 
+# Botón para abrir la ventana de recuperación
+btn_recuperacion = tk.Button(marco, text="USUARIO NUEVO", bg="red", fg="white", command=abrir_ventana_registro)
+btn_recuperacion.pack(side="left", padx=10, pady=10)
+
+
+##########################################################################################################################
+
+# Función para abrir la ventana de recuperación
+def abrir_ventana_recuperacion():
+    ventana_recuperacion()
+
+# Botón para abrir la ventana de recuperación
+btn_recuperacion = tk.Button(marco, text="RECUPERAR CONTRASEÑA", bg="red", fg="white", command=abrir_ventana_recuperacion)
+btn_recuperacion.pack(side="left", padx=10, pady=10)
+
+
+##########################################################################################################################
 
 
 # Iniciar el loop de la aplicación
