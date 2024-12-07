@@ -2,7 +2,7 @@ import sqlite3
 import hashlib
 import tkinter as tk
 from tkinter import messagebox
-from codigo.app_principal import abrir_ventana_principal  # Importar la ventana principal
+from app_principal import abrir_ventana_principal  # Importar la ventana principal
 
 # Crear la base de datos y tabla si no existen
 def crear_base_datos():
