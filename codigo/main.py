@@ -82,7 +82,7 @@ root.geometry("400x300")  # Tamaño de la ventana (ancho x alto)
 root.configure(bg="black")
 
 # Etiqueta de bienvenida
-tk.Label(root, text="Bienvenido", font=("Arial", 14), fg="white", bg="black").pack(pady=10)
+tk.Label(root, text="Inicio de Sesion", font=("Arial", 14), fg="white", bg="black").pack(pady=10)
 
 # Etiquetas y campos de entrada para el usuario
 tk.Label(root, text="Nombre de usuario:", bg="black", fg="white").pack(pady=5)
@@ -93,12 +93,22 @@ tk.Label(root, text="Contraseña:", bg="black", fg="white").pack(pady=5)
 entry_password = tk.Entry(root, show="*")
 entry_password.pack(pady=5)
 
-# Botones para registrar y validar
-btn_register = tk.Button(root, text="Registrar", command=lambda: registrar_desde_formulario())
-btn_register.pack(pady=10)
+btn_validate = tk.Button(root, text="Iniciar Sesión", bg="red", fg="white", command=validar_desde_formulario)
+btn_validate.pack(pady=5)
 
-btn_validate = tk.Button(root, text="Iniciar Sesión", command=lambda: validar_desde_formulario())
-btn_validate.pack(pady=10)
+# Crear un marco rojo con fondo negro y bordes
+marco = tk.Frame(root, bg="black", bd=2, relief="solid", highlightbackground="red", highlightcolor="red", highlightthickness=2)
+marco.pack(pady=10, padx=20)  # Espaciado alrededor del marco
+
+# Botones para registrar y validar con fondo rojo y texto blanco
+btn_register = tk.Button(marco, text="Registrar", bg="red", fg="white", command=registrar_desde_formulario)
+btn_register.pack(side="left", padx=10, pady=10)  # Alinear a la izquierda, con margen horizontal y vertical
+
+btn3 = tk.Button(marco, text="Recuperar Contraseña", bg="red", fg="white")
+btn3.pack(side="left", padx=10, pady=10)
+
+
 
 # Iniciar el loop de la aplicación
 root.mainloop()
+
